@@ -57,7 +57,8 @@ SELECT COUNT(*) AS EmployeesHiredInLastYear FROM employees WHERE hire_date >= DA
 SELECT YEAR(hire_date) AS Year, MONTH(hire_date) AS Month, COUNT(*) AS EmployeesHired FROM employees GROUP BY YEAR(hire_date), MONTH(hire_date) ORDER BY YEAR(hire_date) DESC, MONTH(hire_date) DESC;
 ```
 ---
-##Results##
+
+**Results**
 + Truck Drivers: 120 drivers employed, potential shortages during peak periods.
 + Efficient Trucks: 85 out of 150 trucks are efficient, 65 trucks underperforming.
 + Coverage Areas: Average distance of 250 km daily; some trucks cover 450 km.
