@@ -40,4 +40,19 @@ In this EDA phase, we will examine the human resource dataset to address key ope
 4. Truck Breakdown and Maintenance Frequency
     + Assess the frequency of truck breakdowns and scheduled maintenance to pinpoint areas needing additional support or preventive measures.
 
+These insights from EDA will contribute to optimizing workforce planning, improving fleet management, and enhancing the overall efficiency of oil transfer services.
 ---
+
+```
+SQL
+
+SELECT COUNT(*) AS TotalTruckDrivers
+FROM employees
+WHERE job_title = 'Truck Driver';
+SELECT COUNT(*) AS EfficientTrucks FROM trucks WHERE efficiency_status = 'Efficient';
+SELECT truck_id, SUM(distance_in_km) AS TotalDistanceCovered FROM deliveries GROUP BY truck_id;
+SELECT truck_id, COUNT(*) AS BreakdownCount FROM maintenance_log WHERE maintenance_type = 'Breakdown' GROUP BY truck_id;
+SELECT truck_id, COUNT(*) AS MaintenanceCount FROM maintenance_log GROUP BY truck_id;
+SELECT COUNT(*) AS EmployeesHiredInLastYear FROM employees WHERE hire_date >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR);
+SELECT YEAR(hire_date) AS Year, MONTH(hire_date) AS Month, COUNT(*) AS EmployeesHired FROM employees GROUP BY YEAR(hire_date), MONTH(hire_date) ORDER BY YEAR(hire_date) DESC, MONTH(hire_date) DESC;
+```
