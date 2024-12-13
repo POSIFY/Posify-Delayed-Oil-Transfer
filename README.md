@@ -56,3 +56,14 @@ SELECT truck_id, COUNT(*) AS MaintenanceCount FROM maintenance_log GROUP BY truc
 SELECT COUNT(*) AS EmployeesHiredInLastYear FROM employees WHERE hire_date >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR);
 SELECT YEAR(hire_date) AS Year, MONTH(hire_date) AS Month, COUNT(*) AS EmployeesHired FROM employees GROUP BY YEAR(hire_date), MONTH(hire_date) ORDER BY YEAR(hire_date) DESC, MONTH(hire_date) DESC;
 ```
+---
+##Results##
++ Truck Drivers: 120 drivers employed, potential shortages during peak periods.
++ Efficient Trucks: 85 out of 150 trucks are efficient, 65 trucks underperforming.
++ Coverage Areas: Average distance of 250 km daily; some trucks cover 450 km.
++ Truck Breakdowns: Average of 2.5 breakdowns per month; some trucks need urgent replacement.
++ Employee Hiring: 40 new employees hired, 15 truck drivers in the past year.
++ Hiring Trend: 15 truck drivers were hired in the last quarter, indicating demand or turnover.
++ Insight: Fleet and workforce optimization needed for efficiency and cost reduction.
+---
+![dashboard](https://github.com/user-attachments/assets/cc6d2946-007c-43a7-bd9f-0f24143f6d9b)
